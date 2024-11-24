@@ -31,3 +31,4 @@ C:\Users\oso\Documents\VisualStudioCode\WeatherApp\WeatherApp\obj\Debug\net8.0\r
 C:\Users\oso\Documents\VisualStudioCode\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.pdb
 C:\Users\oso\Documents\VisualStudioCode\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.genruntimeconfig.cache
 C:\Users\oso\Documents\VisualStudioCode\WeatherApp\WeatherApp\obj\Debug\net8.0\ref\WeatherApp.dll
+C:\Users\oso\Documents\VisualStudioCode\WeatherApp\WeatherApp\obj\Debug\net8.0\WeatherApp.sourcelink.json

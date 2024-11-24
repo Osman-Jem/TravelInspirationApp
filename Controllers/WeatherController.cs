@@ -12,7 +12,7 @@ public class WeatherController : Controller
         _weatherService = weatherService;
     }
 
-    public async Task<IActionResult> Index(string stad = "Gothenburg") // Tar emot "city" från formuläret
+    public async Task<IActionResult> Index(string stad = "Gothenburg") // Tar emot "city" från formuläret, default är Göteborg
     {
         try
         {

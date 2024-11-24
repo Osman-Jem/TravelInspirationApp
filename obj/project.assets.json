@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
-      "projectName": "WeatherApp",
-      "projectPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+      "projectUniqueName": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj",
+      "projectName": "TravelInspirationApp",
+      "projectPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj",
       "packagesPath": "C:\\Users\\oso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\WeatherApp\\obj\\",
+      "outputPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oso\\AppData\\Roaming\\NuGet\\NuGet.Config",
