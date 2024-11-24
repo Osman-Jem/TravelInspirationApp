@@ -1,4 +1,4 @@
-using WeatherApp.Services;
+using TravelInspiration.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

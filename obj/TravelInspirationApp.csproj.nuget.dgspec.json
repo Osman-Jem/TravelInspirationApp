@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj": {}
+    "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\TravelInspirationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj": {
+    "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\TravelInspirationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj",
+        "projectUniqueName": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\TravelInspirationApp.csproj",
         "projectName": "TravelInspirationApp",
-        "projectPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\TravelInspirationApp.csproj",
+        "projectPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\TravelInspirationApp.csproj",
         "packagesPath": "C:\\Users\\oso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\TravelInspirationApp\\obj\\",
+        "outputPath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oso\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,4 +1,4 @@
-namespace WeatherApp.Models
+namespace TravelInspiration.Models
 {
     public class WeatherData
     {   

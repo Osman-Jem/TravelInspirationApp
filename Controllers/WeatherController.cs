@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using WeatherApp.Services;
+using TravelInspiration.Services;
 
-namespace WeatherApp.Controllers;
+namespace TravelInspiration.Controllers;
 
 public class WeatherController : Controller
 {
