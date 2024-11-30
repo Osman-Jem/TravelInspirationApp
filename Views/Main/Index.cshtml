@@ -1,0 +1,99 @@
+@model TravelInspiration.ViewModels.MainViewModel
+
+<div class="container">
+    <h1 class="title">City Overview</h1>
+
+    <!-- Formulär för att söka stad -->
+    <div class="search-section">
+        <form method="post" asp-action="Index" class="form-inline">
+            <label for="cityName" class="form-label">Enter city:</label>
+            <input type="text" id="cityName" name="CityName" value="@Model.CityName" class="form-control" placeholder="e.g., Gothenburg" />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <!-- Visning av väderdata -->
+    @if (Model.Weather != null)
+    {
+        <div class="weather-section">
+            <h2>Weather in @Model.CityName</h2>
+            <p><strong>Temperature:</strong> @Model.Weather.Main.Temp °C</p>
+            <p><strong>Humidity:</strong> @Model.Weather.Main.Humidity %</p>
+        </div>
+    }
+
+    <!-- Visning av nyhetsdata -->
+    @if (Model.News != null && Model.News.Any())
+    {
+        <div class="news-section">
+            <h2>Latest News in @Model.CityName</h2>
+            @foreach (var article in Model.News.Take(5))
+            {
+                <div class="news-item">
+                    <h3>@article.Title</h3>
+                    <p><strong>Source:</strong> @article.Source.Name</p>
+                    <p>@article.Description</p>
+                    <p><a href="@article.Url" target="_blank">Read more</a></p>
+                    @if (!string.IsNullOrEmpty(article.UrlToImage))
+                    {
+                        <img src="@article.UrlToImage" alt="Article Image" style="max-width: 100%; height: auto;" />
+                    }
+                    <p><small>Published at: @article.PublishedAt.ToString("yyyy-MM-dd HH:mm")</small></p>
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Felmeddelanden -->
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="error-section">
+            <p class="text-danger">@ViewBag.ErrorMessage</p>
+        </div>
+    }
+</div>
+
+
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form-inline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .form-label {
+        margin-right: 10px;
+    }
+    .form-control {
+        width: 60%;
+        padding: 8px;
+        font-size: 16px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .weather-section, .error-section, .additional-info-section, .news-section {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+    .text-danger {
+        color: #e74c3c;
+    }
+</style>

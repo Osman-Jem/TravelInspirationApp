@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ni9VqMfsftw=",
+  "dgSpecHash": "wWLfyV4ozeI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
+  "projectFilePath": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\TravelInspirationApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oso\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

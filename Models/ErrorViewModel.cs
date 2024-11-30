@@ -1,4 +1,4 @@
-namespace WeatherApp.Models;
+namespace TravelInspirationApp.Models;
 
 public class ErrorViewModel
 {

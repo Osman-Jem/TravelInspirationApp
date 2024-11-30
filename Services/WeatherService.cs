@@ -1,9 +1,9 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using WeatherApp.Models;
+using TravelInspiration.Models;
 
-namespace WeatherApp.Services
+namespace TravelInspiration.Services
 {
     public class WeatherService
     {
@@ -12,11 +12,9 @@ namespace WeatherApp.Services
         public async Task<WeatherData> GetWeatherAsync(string stad)
         {
             var client = new HttpClient();
-            var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={stad}&appid={_apiKey}&units=metric");
-            response.EnsureSuccessStatusCode();
+            var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={stad}&appid={_apiKey}&units=metric"); // Hämtar väderdata för staden
+            response.EnsureSuccessStatusCode(); // Verifierar att anropet lyckades
             return JsonConvert.DeserializeObject<WeatherData>(await response.Content.ReadAsStringAsync());
         }
     }
-
-    
 }
