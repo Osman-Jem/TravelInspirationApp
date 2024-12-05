@@ -1,10 +1,12 @@
-using WeatherApp.Services;
+using TravelInspiration.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<WeatherService>();
+builder.Services.AddScoped<NewsService>();
+builder.Services.AddScoped<EventService>();
 
 var app = builder.Build();
 
@@ -25,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Weather}/{action=Index}/{id?}");
+    pattern: "{controller=Main}/{action=Index}/{id?}");
 
 app.Run();
