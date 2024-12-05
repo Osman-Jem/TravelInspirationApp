@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using TravelInspiration.Services;
 using TravelInspiration.ViewModels;
 
@@ -8,11 +9,13 @@ namespace TravelInspiration.Controllers
     {
         private readonly WeatherService _weatherService;
         private readonly NewsService _newsService;
+        private readonly EventService _eventService;
 
-        public MainController(WeatherService weatherService, NewsService newsService)
+        public MainController(WeatherService weatherService, NewsService newsService, EventService eventService)
         {
             _weatherService = weatherService;
             _newsService = newsService;
+            _eventService = eventService;
         }
 
         [HttpGet]
@@ -21,16 +24,14 @@ namespace TravelInspiration.Controllers
         {
             if (string.IsNullOrEmpty(model.CityName))
             {
-                model.CityName = "Göteborg"; // Standard om inget anges
+                model.CityName = "Göteborg"; // Standard om ingen stad anges
             }
 
             try
             {
-                var weatherData = await _weatherService.GetWeatherAsync(model.CityName);
-                model.Weather = weatherData;
-
-                var newsData = await _newsService.GetNewsAsync(model.CityName);
-                model.News = newsData;
+                model.Weather = await _weatherService.GetWeatherAsync(model.CityName);
+                model.News = await _newsService.GetNewsAsync(model.CityName);
+                model.Events = await _eventService.GetEventAsync(model.CityName);
             }
             catch (Exception ex)
             {

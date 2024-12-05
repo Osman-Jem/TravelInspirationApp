@@ -19,7 +19,7 @@ namespace TravelInspiration.Services
                 // Lägg till User-Agent-header (ChatGPT)
                 client.DefaultRequestHeaders.Add("User-Agent", "TravelInspirationApp/1.0");
 
-                var url = $"https://newsapi.org/v2/everything?q={cityEncoded}&pageSize=4&language=sv&apiKey={_apiKey}"; // Hämtar 4 nyhetsartiklar på svenska om staden
+                var url = $"https://newsapi.org/v2/everything?q={cityEncoded}&pageSize=3&language=sv&apiKey={_apiKey}"; // Hämtar 3 nyhetsartiklar på svenska om staden
 
                 var response = await client.GetAsync(url);
 

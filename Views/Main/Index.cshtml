@@ -22,12 +22,27 @@
         </div>
     }
 
+    <!-- Visning av eventsdata -->
+    @if (Model.Events != null && Model.Events.Any())
+    {
+        <h2>Events in @Model.CityName</h2>
+        @foreach (var ev in Model.Events)
+        {
+            <div>
+                <h3>@ev.Title</h3>
+                <p>@ev.Description</p>
+                <p><strong>Venue:</strong> @ev.Venue.Name, @ev.Venue.Address</p>
+                <p><strong>Date:</strong> @ev.DateTimeUtc?.ToString("yyyy-MM-dd HH:mm")</p>
+            </div>
+        }
+    }
+
     <!-- Visning av nyhetsdata -->
     @if (Model.News != null && Model.News.Any())
     {
         <div class="news-section">
             <h2>Latest News in @Model.CityName</h2>
-            @foreach (var article in Model.News.Take(5))
+            @foreach (var article in Model.News.Take(4))
             {
                 <div class="news-item">
                     <h3>@article.Title</h3>
@@ -86,7 +101,7 @@
     .btn {
         padding: 8px 16px;
     }
-    .weather-section, .error-section, .additional-info-section, .news-section {
+    .weather-section, .error-section, .additional-info-section, .news-section, .events-section {
         margin-top: 20px;
         padding: 15px;
         background-color: #ffffff;

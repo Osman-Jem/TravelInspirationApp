@@ -8,5 +8,6 @@ namespace TravelInspiration.ViewModels
         public string CityName { get; set; } // Stadens namn
         public WeatherData Weather { get; set; } // Väderdata
         public List<Article> News { get; set; } // Lista över nyhetsartiklar
+        public List<Event> Events { get; set; } // Eventdata
     }
 }

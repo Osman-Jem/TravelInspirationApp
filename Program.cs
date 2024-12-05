@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<WeatherService>();
 builder.Services.AddScoped<NewsService>();
+builder.Services.AddScoped<EventService>();
 
 var app = builder.Build();
 
