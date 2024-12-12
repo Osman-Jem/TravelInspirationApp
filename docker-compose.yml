@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  travelinspirationapp:
+    build: .
+    ports:
+      - "8080:5000"  # Mappar port 5000 inuti containern till port 8080 på maskinen
+    restart: always

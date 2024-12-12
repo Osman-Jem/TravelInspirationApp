@@ -103,3 +103,8 @@ C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\re
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\TravelInspirationApp.pdb
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\TravelInspirationApp.genruntimeconfig.cache
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\ref\TravelInspirationApp.dll
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\web.config
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\TravelInspirationApp.deps.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\TravelInspirationApp.runtimeconfig.json
