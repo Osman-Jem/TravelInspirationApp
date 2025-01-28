@@ -1,23 +1,31 @@
+Buildspec.yml:
 version: 0.2
 
 phases:
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
+      # Authenticate Docker with ECR
+      - echo "Logging in to Amazon ECR..."
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
+      # Pull the Docker Hub image
+      - echo "Pulling image from Docker Hub..."
+      - docker pull osmanjem/travelinspirationapp:latest
+
   build:
     commands:
-      - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
-      - echo Tagging the Docker image...
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      # Tag the image for ECR
+      - echo "Tagging image..."
+      - docker tag osmanjem/travelinspirationapp:latest $REPOSITORY_URI:latest
+
   post_build:
     commands:
-      - echo Pushing the Docker image...
+      # Push the image to ECR
+      - echo "Pushing image to ECR..."
       - docker push $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:$CODEBUILD_RESOLVED_SOURCE_VERSION
-      - echo Writing imagedefinitions.json file...
-      - printf '[{"name":"travelinspiration-container","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
+      # Generate imagedefinitions.json for ECS deployment
+      - echo "Generating imagedefinitions.json..."
+      - printf '[{"name":"travelinspiration-container","imageUri":"%s"}]' "$REPOSITORY_URI:latest" > imagedefinitions.json
+
 artifacts:
   files:
-    - imagedefinitions.json
+    - imagedefinitions.json 
