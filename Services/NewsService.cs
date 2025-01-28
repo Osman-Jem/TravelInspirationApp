@@ -17,7 +17,7 @@ namespace TravelInspiration.Services
             using (var client = new HttpClient())
             {
                 // Lägg till User-Agent-header (ChatGPT)
-                client.DefaultRequestHeaders.Add("User-Agent", "TravelInspirationApp/1.0");
+                client.DefaultRequestHeaders.Add("User-Agent", "TravelInspirationApp/1.0"); // krävs av NewsAPI för att använda deras API
 
                 var url = $"https://newsapi.org/v2/everything?q={cityEncoded}&pageSize=3&language=sv&apiKey={_apiKey}"; // Hämtar 3 nyhetsartiklar på svenska om staden
 

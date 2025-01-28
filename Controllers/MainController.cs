@@ -24,7 +24,7 @@ namespace TravelInspiration.Controllers
         {
             if (string.IsNullOrEmpty(model.CityName))
             {
-                model.CityName = "Göteborg"; // Standard om ingen stad anges
+                model.CityName = "Göteborg"; // Standard om ingen annan stad anges
             }
 
             try
