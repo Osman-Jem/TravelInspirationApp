@@ -1,9 +1,9 @@
 namespace TravelInspiration.Models
 {
     public class WeatherData
-    {   
-        public MainData Main { get; set; }
-        public string Name { get; set; }
+    {
+        public required MainData Main { get; set; }
+        public required string Name { get; set; }
     }
 
     public class MainData

@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TravelInspirationApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TravelInspirationApp.bundle.scp.css"
+      "PackagePath": "staticwebassets\\TravelInspirationApp.yefiuhw2kz.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\wwwroot\\css\\site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "C:\\Users\\oso\\Documents\\VisualStudioCode\\TravelInspirationApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TravelInspirationApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TravelInspirationApp.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -8,20 +8,19 @@ namespace TravelInspiration.Services
 {
     public class EventService
     {
-        private readonly string _clientID = "NDcyNjg4Mzh8MTczMzMyOTgwMS43Mjk1MDQ4"; // Min SeatGeek TravelInspirationApp ClientID.
+        private readonly string _clientID = "NDcyNjg4Mzh8MTczMzMyOTgwMS43Mjk1MDQ4"; // Min SeatGeek TravelInspirationApp ClientID
 
         public async Task<List<Event>> GetEventAsync(string city)
         {
             using (var client = new HttpClient())
             {
                 var url = $"https://api.seatgeek.com/2/events?venue.city={city}&client_id={_clientID}";
-                var response = await client.GetAsync(url);
-
+                var response = await client.GetAsync(url); // Hämtar data från API
                 if (response.IsSuccessStatusCode)
                 {
                     var responseBody = await response.Content.ReadAsStringAsync();
                     var eventData = JsonConvert.DeserializeObject<EventData>(responseBody);
-                    return eventData.Events;
+                    return eventData?.Events ?? new List<Event>(); // Returnerar en tom lista om inga event hittades
                 }
                 else
                 {

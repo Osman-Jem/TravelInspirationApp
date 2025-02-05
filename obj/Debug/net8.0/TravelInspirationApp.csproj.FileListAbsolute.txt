@@ -108,3 +108,6 @@ C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\pu
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\appsettings.json
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\TravelInspirationApp.deps.json
 C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\publish\TravelInspirationApp.runtimeconfig.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\bin\Debug\net8.0\TravelInspirationApp.staticwebassets.endpoints.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\oso\Documents\VisualStudioCode\TravelInspirationApp\obj\Debug\net8.0\staticwebassets\msbuild.TravelInspirationApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

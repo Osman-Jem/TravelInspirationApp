@@ -5,9 +5,9 @@ namespace TravelInspiration.ViewModels
 {
     public class MainViewModel
     {
-        public string CityName { get; set; } // Stadens namn
-        public WeatherData Weather { get; set; } // Väderdata
-        public List<Article> News { get; set; } // Lista över nyhetsartiklar
-        public List<Event> Events { get; set; } // Eventdata
+        public required string CityName { get; set; } // Stadens namn
+        public required WeatherData Weather { get; set; } // Väderdata
+        public required List<Article> News { get; set; } // Lista över nyhetsartiklar
+        public required List<Event> Events { get; set; } // Eventdata
     }
 }
